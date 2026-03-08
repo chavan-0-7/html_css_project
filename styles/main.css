@@ -1,0 +1,268 @@
+/*global resetting*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans 3", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+
+/*global variable*/
+:root {
+  --bg-top-nav: #0f1114;
+  --secondary-text-color: white;
+  --bg-hover-button: #f0f6ff;
+  --button-secondary-color: #0056d2;
+  --button-primary-color: #999;
+  --button-secondary-hover: #0048b0;
+}
+/*navbar top*/
+.topNavbar {
+  background-color: var(--bg-top-nav);
+  padding-left: 60px;
+}
+.topNavbar ul {
+  display: flex;
+  color: var(--secondary-text-color);
+  align-items: center;
+  gap: 15px;
+}
+.topNavbar ul a {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  padding: 10px;
+  display: inline-block;
+}
+.topNavbar ul li:hover a {
+  color: var(--bg-top-nav);
+  font-weight: 600;
+}
+.topNavbar ul li:hover {
+  background-color: var(--secondary-text-color);
+  color: var(--bg-top-nav);
+}
+.topNavbar ul li:first-child a {
+  border-bottom: 5px solid white;
+}
+.logo {
+  height: 32px;
+  width: 127px;
+}
+
+.bottomNavbar {
+  height: 64px;
+  background-color: var(--secondary-text-color);
+  padding: 10px 50px;
+  border-bottom: 1px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottomNavbarFirstSection {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 60%;
+}
+.bottomNavbarFirstSection a:nth-child(2) {
+  font-size: 14px;
+  padding: 10px;
+  color: var(--button-primary-color);
+  border-radius: 0.375rem;
+}
+.bottomNavbarFirstSection a:nth-child(2):hover {
+  background-color: var(--bg-hover-button);
+  color: var(--button-secondary-color);
+}
+.bottomNavbarSearch {
+  border: 1px solid lightgreen;
+  border-radius: 1.5rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px;
+}
+.bottomNavbarSearch > button {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+  border: none;
+  background-color: var(--button-secondary-color);
+  display: grid;
+  place-content: center;
+}
+.bottomNavbarSearch > button i {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.bottomNavbarSearch > input {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 90%;
+  font-size: 1rem;
+  border-radius: 2rem; /*i can use the overflow:hidden*/
+}
+.bottomNavSecondSection {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.bottomNavbarSecondSection a:first-child {
+  color: var(--button-secondary-color);
+  font-size: 1rem;
+  font-weight: 400;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.primaryButton {
+  border: 1.5px solid var(--button-secondary-color);
+  color: var(--button-secondary-color);
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  &:hover {
+    background-color: var(--bg-hover-button);
+  }
+}
+.secondaryButton {
+  padding: 12px 14px;
+  border: 3px solid var(--button-secondary-color);
+  outline: none;
+  color: var(--secondary-text-color);
+  background-color: var(--button-secondary-color);
+  font-weight: 600;
+  border-radius: 0.375rem;
+  &:hover {
+    background-color: var(--button-secondary-hover);
+  }
+}
+.largeButton {
+  padding: 12px 14px;
+  border: 3px solid var(--button-secondary-color);
+  outline: none;
+  color: var(--button-secondary-color);
+  background-color: var(--secondary-text-colorr);
+  font-weight: 600;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  &:hover {
+    background-color: var(--bg-hover-button);
+  }
+}
+
+/*Banner*/
+.bannerContainer {
+  padding: 30px 40px;
+}
+.banner {
+  background-color: var(--secondary-text-color);
+  background-image: url(../assets/BC-4953_LOHP_Redesign_Banner6-Desktop_JoinForFreeGeneric_330x304.png);
+  background-size: 35%;
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding: 2.5rem 3.5rem;
+}
+
+.banner h1 {
+  font-size: 5rem;
+  width: 45%;
+  font-weight: 600;
+  line-height: 85px;
+}
+.banner h3 {
+  font-weight: 400;
+  padding: 20px 0 44px;
+}
+.banner .largebutton {
+  margin-left: 0.5rem;
+}
+
+.midIconSection {
+  max-height: 60vh;
+  width: 100%;
+  padding: 50px 70px 20px;
+  gap: 10px;
+  background-color: rgb(242, 245, 250);
+}
+.midIconSection > h1 {
+  text-align: center;
+  font-size: 1.875rem;
+  height: 10%;
+  width: 100%;
+  font-weight: 400;
+}
+.midIconSection > h1:hover  a {
+  text-decoration: underline;
+}
+.midIconSection>h1>a{
+  color: var(--button-secondary-color);
+}
+.logoIcon {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.logoIcon > a > img {
+  padding-top: 60px;
+  max-height: 10rem;
+  max-width: 8rem;
+}
+
+.InfoBlock{
+ height: 25vh ;
+ max-width: 90%;
+ margin: 100px auto;
+ border: 1px solid rgba(158, 158, 238,0.4) ;
+ border-radius: 0.8rem;
+}
+.InfoBlock>h3{
+  padding-top:1.5rem;
+  text-align: center;
+font-weight: 600;
+
+}
+.subInfoBlock{
+  padding: 20px 80px;
+  display: flex;
+  justify-content: space-around;
+}
+.subInfoBlock>div{
+  border: 1px solid rgba(172, 172, 226,0.4) ;
+  padding: 0.7rem;
+  border-radius: 0.8rem;
+}
+.subInfoBlock>div>a>h3>i{
+  height: 2rem;
+  width: 2rem;
+  color: white;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  
+  background-color: var(--button-secondary-color);
+}
+.subInfoBlock>div>a{
+  color: var(--bg-top-nav);
+}
+.subInfoBlock>div>a>h3{
+  font-weight: 500;
+}
+.subInfoBlock>div:hover{
+ transition: all;
+ transition-duration: 300ms;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px lightgray;
+  ;
+}
